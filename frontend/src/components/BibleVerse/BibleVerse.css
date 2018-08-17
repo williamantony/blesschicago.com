@@ -1,0 +1,57 @@
+.BibleVerse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 480px;
+  background-color: #f0f0f0;
+}
+
+.BibleVerse__quote {
+  display: flex;
+  align-items: center;
+  color: #cccccc;
+  font-size: 200px;
+  font-family: 'Tinos', serif;
+  font-weight: 700;
+  height: 60px;
+  margin-left: -100px;
+}
+.BibleVerse__verse {
+  color: #222222;
+  font-size: 48px;
+  font-family: 'Tinos', serif;
+  letter-spacing: 1.5px;
+  word-spacing: -5px;
+  line-height: 56px;
+}
+.BibleVerse__address {
+  margin-top: 20px;
+}
+.BibleVerse__address > a {
+  display: inline-block;
+  text-decoration: none;
+}
+.BibleVerse__address > a > .text {
+  color: #E91E63;
+  font-size: 28px;
+  font-family: 'Tinos', serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.BibleVerse__address > a > .line {
+  width: 0px;
+  height: 2px;
+  margin-top: 5px;
+  border-radius: 1px;
+  background-color: transparent;
+  transition: width 0.25s ease 0.25s,
+    background 0.25s ease 0s;
+}
+.BibleVerse__address > a:hover > .line {
+  width: 100%;
+  background-color: #E91E63;
+  transition: width 0.25s ease 0s,
+    background 0.25s ease 0s;
+}
