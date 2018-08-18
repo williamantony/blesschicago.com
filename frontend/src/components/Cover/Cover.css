@@ -1,5 +1,10 @@
 .Cover {
   position: relative;
+  height: 100vh;
+  min-height: 800px;
+  max-height: 1000px;
+  background-color: #222;
+  z-index: 1;
 }
 .Cover__image {
   position: absolute;
@@ -7,13 +12,38 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: blue;
   background-image: url('./images/worship-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   filter: grayscale(0.75);
+  opacity: 0;
 }
+.Cover[data-isbgvisible="true"] .Cover__image {
+  opacity: 1.0;
+  transition: opacity 1s ease 0s;
+}
+.Cover__image-pastor {
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/pastor-tinu-george-bless-chicago.png');
+  background-position: center -100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.Cover[data-isbgvisible="true"] .Cover__image-pastor {
+  right: 0px;
+  opacity: 1.0;
+  transition: right 0.75s ease 0s,
+    opacity 1s ease 0.5s;
+}
+
+
 .Cover__bg {
   position: absolute;
   top: 0px;
@@ -22,6 +52,14 @@
   height: 100%;
   background-color: blue;
   opacity: 0.35;
+}
+.Cover__dark-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .Cover__gradient {
   position: absolute;
@@ -36,35 +74,70 @@
   opacity: 0.5;
 }
 
-.heading {
+.Cover__area {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 480px;
-  background-color: rgba(0, 0, 0, 0.5);
+  align-items: flex-start;
+  height: 100%;
+  min-height: 800px;
 }
-.heading__logo {
-  position: relative;
+.Cover__area > .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0px 100px;
+  margin: 0px auto;
 }
-.heading__title {
-  color: #ffeb3b;
-  font-size: 56px;
+
+.Header__logo {
+  position: relative;
+  padding: 0px 25px 25px 25px;
+  margin: 0px 0px 25px -25px;
+}
+.Header__logo__title {
+  color: #ffffff;
+  font-size: 48px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-.heading__subtitle {
+.Header__logo__subtitle {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 28px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  word-spacing: 9px;
-  line-height: 42px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 40px;
 }
-.heading__subtitle > span.year {
-  font-weight: 600;
+
+.Info {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  padding: 0px 0px 0px 50px;
+  margin: 20px 0px 20px 50px;
+  border-left: 7px solid rgba(255, 255, 255, 0.15);
+}
+.Info__name {
+  display: inline-block;
+  color: #ffc000;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ffc000;
+}
+.Info__desc {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  line-height: 32px;
+  margin-top: 15px;
 }
