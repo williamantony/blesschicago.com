@@ -68,7 +68,10 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-
+.wrapper {
+	max-width: 1200px;
+	margin: 0px auto;
+}
 .App {
 
 }

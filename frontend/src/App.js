@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import Cover from './components/Cover/Cover';
+import BibleVerse from './components/BibleVerse/BibleVerse';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Cover />
+        <BibleVerse />
       </div>
     );
   }
