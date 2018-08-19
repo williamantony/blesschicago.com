@@ -1,0 +1,23 @@
+.CoverLogo {
+  position: relative;
+  padding: 0px 25px 0px 25px;
+  margin: 0px 0px 0px -25px;
+}
+.CoverLogo__title {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.CoverLogo__subtitle {
+  color: #ffffff;
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 40px;
+}
