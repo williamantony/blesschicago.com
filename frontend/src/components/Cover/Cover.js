@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Cover.css';
+import CoverInfo from './components/CoverInfo/CoverInfo';
+import CoverLogo from './components/CoverLogo/CoverLogo';
 
 class Cover extends Component {
   constructor(props) {
@@ -26,38 +28,10 @@ class Cover extends Component {
         <div className="Cover__image-pastor" />
         <div className="Cover__gradient" />
         <div className="Cover__area">
-        
           <div className="wrapper">
-            <div className="Header__logo">
-              <div className="Header__logo__title">Bless Chicago</div>
-              <div className="Header__logo__subtitle">
-                Convention - <span className="year">2018</span>
-              </div>
-            </div>
-
-            <div className="Info">
-              <div className="Info__name">Guest Pastor</div>
-              <div className="Info__desc">Pastor Tinu George</div>
-            </div>
-
-            <div className="Info">
-              <div className="Info__name">Date & Time</div>
-              <div className="Info__desc">
-                September 21 - 23<br/>
-                Friday, Saturday & Sunday<br />
-                starting at 6:30 pm
-              </div>
-            </div>
-
-            <div className="Info">
-              <div className="Info__name">Venue</div>
-              <div className="Info__desc">
-                Community Center<br />
-                120 E Oak St, Addison, IL 60101
-              </div>
-            </div>
+            <CoverLogo />
+            <CoverInfo />
           </div>
-
         </div>
       </div>
     );
