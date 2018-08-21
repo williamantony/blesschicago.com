@@ -1,0 +1,43 @@
+.ContactFormInput {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+}
+
+.ContactFormInput__label {
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  word-spacing: 3px;
+  padding: 12px 13px 8px 13px;
+  margin: 0px 20px -40px 2px;
+}
+.ContactFormInput[data-focused="true"] .ContactFormInput__label {
+  background-color: #fff;
+}
+.ContactFormInput__input {
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding: 15px;
+  padding: 40px 15px 15px 15px;
+  border: 0px;
+  outline: 0px;
+  background-color: transparent;
+}
+textarea.ContactFormInput__input {
+  min-height: 125px;
+  resize: vertical;
+}
+
+
+.ContactFormInput__input:focus {
+  box-shadow: inset 0px 0px 0px 2px dodgerblue;
+  background-color: #ffffff;
+}
