@@ -1,0 +1,40 @@
+.VenueInfo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.VenueInfo > .wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px 100px;
+}
+.VenueInfo__content {
+  position: relative;
+  box-shadow: 0px 0px 150px 75px rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  padding: 25px;
+  background-color: #ffffff;
+  z-index: 3;
+}
+.VenueInfo__content__label {
+  color: #e2633b;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+.VenueInfo__content__address {
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 42px;
+}
