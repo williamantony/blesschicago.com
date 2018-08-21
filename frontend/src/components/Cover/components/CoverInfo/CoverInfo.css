@@ -8,13 +8,14 @@
   margin: 0px 0px 0px 0px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
   transform: scale(0.98);
   transition: background 0.25s ease-in-out 0s,
     transform 0.25s ease-in-out 0s;
 }
 .CoverInfo__item:hover {
   transform: scale(1.0);
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .CoverInfo__item > .name {
   display: inline-block;

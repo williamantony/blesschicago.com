@@ -19,7 +19,7 @@ class CoverInfo extends Component {
         <div className="CoverInfo__item">
           <div className="name">Venue</div>
           <div className="desc">
-            Addison Park District’s Community Center
+            120 E Oak St, Addison, IL
           </div>
         </div>
       </div>
