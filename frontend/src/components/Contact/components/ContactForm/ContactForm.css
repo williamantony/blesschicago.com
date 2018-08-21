@@ -1,0 +1,9 @@
+.ContactForm {
+
+}
+.ContactForm > form {
+  width: 100%;
+  max-width: 640px;
+  padding: 100px;
+  margin: 0px auto;
+}
