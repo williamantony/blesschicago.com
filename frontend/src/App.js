@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Cover from './components/Cover/Cover';
 import BibleVerse from './components/BibleVerse/BibleVerse';
+import EventSchedule from './components/EventSchedule/EventSchedule';
+import Location from './components/Location/Location';
+import Contact from './components/Contact/Contact';
 
 class App extends Component {
   render() {
@@ -9,6 +12,9 @@ class App extends Component {
       <div className="App">
         <Cover />
         <BibleVerse />
+        <EventSchedule />
+        <Location />
+        <Contact />
       </div>
     );
   }
