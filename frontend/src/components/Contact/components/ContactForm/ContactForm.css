@@ -1,9 +1,78 @@
 .ContactForm {
-
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #fff;
 }
-.ContactForm > form {
+.ContactForm__gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  opacity: 0.1;
+}
+.ContactForm__gradient:nth-child(2) {
+  height: 10%;
+}
+.ContactForm__bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #00075a;
+  opacity: 0.1;
+}
+.ContactForm > .wrapper {
   width: 100%;
   max-width: 640px;
   padding: 100px;
   margin: 0px auto;
+}
+.ContactForm h2 {
+  color: #565a80;
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 20px;
+}
+.ContactForm form {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0px auto;
+}
+
+.ContactFormButton {
+  display: flex;
+  justify-content: flex-end;
+}
+.ContactFormButton button {
+  min-width: 200px;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  padding: 15px 35px;
+  margin: 10px 20px;
+  border-radius: 5px;
+  border: 0px;
+  outline: 0px;
+  background-color: #3550e6;
+  cursor: pointer;
+  transition: background-color 0.15s linear 0s;
+}
+.ContactFormButton button:hover,
+.ContactFormButton button:focus {
+  background-color: darkblue;
+}
+.ContactFormButton button:active {
+  background-color: #795548;
 }

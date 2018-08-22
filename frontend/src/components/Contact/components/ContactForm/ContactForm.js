@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './ContactForm.css';
 import ContactFormInput from './components/ContactFormInput/ContactFormInput';
 
@@ -10,52 +11,66 @@ class ContactForm extends Component {
       email: '',
       message: '',
     };
-  }  
+  }
+
+  componentWillReceiveProps(props) {
+    this.setState({
+      ...props.contactForm,
+    });
+  }
 
   handleSubmit = (event) => {
     event.preventDefault();
-
-
-  }
-
-  handleInput = (event) => {
-
-    const {
-      name,
-      value,
-    } = event.target;
-
-    this.setState({
-      [name]: value,
-    });
+    
+    
   }
 
   render() {
     return (
       <div className="ContactForm">
-        <form onSubmit={this.handleSubmit}>
+        <div className="ContactForm__gradient" />
+        <div className="ContactForm__gradient" />
+        <div className="ContactForm__bg" />
+        <div className="wrapper">
+          <h2>Contact Us</h2>
+          <form onSubmit={this.handleSubmit}>
 
-          <ContactFormInput
-            type="text"
-            name="name"
-            label="Full Name"
-          />
-          <ContactFormInput
-            type="email"
-            name="email"
-            label="Email Address"
-          />
-          <ContactFormInput
-            type="textarea"
-            name="message"
-            label="Your Message"
-          />
+            <ContactFormInput
+              type="text"
+              name="name"
+              label="Full Name"
+            />
+            <ContactFormInput
+              type="email"
+              name="email"
+              label="Email Address"
+            />
+            <ContactFormInput
+              type="textarea"
+              name="message"
+              label="Your Message"
+            />
 
-        </form>
+            <div className="ContactFormButton">
+              <button type="submit">Submit</button>
+            </div>
+
+          </form>
+        </div>
       </div>
     );
   }
 
 }
 
-export default ContactForm;
+const mapStateToProps = (state) => {
+  return {
+    contactForm: state.contactForm,
+  };
+};
+
+const mapDispatchToProps = {
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
