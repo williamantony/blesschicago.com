@@ -6,8 +6,9 @@ class BibleVerse extends Component {
   render() {
     return (
       <div className="BibleVerse">
-        <div className="Slider__item__content">
-          <div className="Slider__bible-text">
+        <div className="BibleVerse__bg" />
+        <div className="BibleVerse__content">
+          <div className="BibleVerse__bible-text">
             <div className="BibleVerse__quote">&ldquo;</div>
             <div className="BibleVerse__verse">
               Come near to God,<br />
