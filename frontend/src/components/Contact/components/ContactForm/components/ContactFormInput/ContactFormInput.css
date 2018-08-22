@@ -1,43 +1,51 @@
 .ContactFormInput {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
-  background-color: #fafafa;
+  margin: 15px 20px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 0px 0px #3550e6,
+    0px 50px 100px -15px rgba(0, 7, 90, 0.1),
+    0px 0px 0px 1px rgb(211, 215, 229),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  cursor: text;
+  transition: box-shadow 0.15s ease-in-out 0s;
 }
+.ContactFormInput[data-focused="true"] {
+  box-shadow: inset 0px 0px 0px 2px #3550e6,
+    0px 50px 100px -15px rgba(0, 7, 90, 0.1),
+    0px 0px 0px 1px rgb(211, 215, 229),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+
 
 .ContactFormInput__label {
   position: relative;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  color: rgba(0, 7, 90, 0.5);
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.25px;
+  font-weight: 500;
+  letter-spacing: 1px;
   word-spacing: 3px;
-  padding: 12px 13px 8px 13px;
-  margin: 0px 20px -40px 2px;
+  text-transform: uppercase;
+  padding: 15px 15px 5px 15px;
+  cursor: text;
 }
 .ContactFormInput[data-focused="true"] .ContactFormInput__label {
-  background-color: #fff;
+  color: #3550e6;
 }
 .ContactFormInput__input {
   font-size: 24px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   padding: 15px;
-  padding: 40px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
   border: 0px;
   outline: 0px;
   background-color: transparent;
 }
 textarea.ContactFormInput__input {
   min-height: 125px;
+  max-height: 250px;
   resize: vertical;
-}
-
-
-.ContactFormInput__input:focus {
-  box-shadow: inset 0px 0px 0px 2px dodgerblue;
-  background-color: #ffffff;
 }
