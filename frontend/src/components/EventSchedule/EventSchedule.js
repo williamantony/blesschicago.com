@@ -36,7 +36,8 @@ class EventSchedule extends Component {
     return (
       <div className="EventSchedule">
         <div className="EventSchedule__gradient" />
-        <div className="EventSchedule__gradient" />
+        {/* <div className="EventSchedule__gradient" /> */}
+        <div className="EventSchedule__bg" />
         <div className="EventSchedule__wrapper">
           {
             this.state.events.map((event, index) => {
@@ -78,7 +79,7 @@ class EventSchedule extends Component {
                       <div className="EventCard__value">
                             {
                               event.place.split('\n').map((part, i) => {
-                                return <div key={index}>{ part }</div>;
+                                return <div key={i}>{ part }</div>;
                               })
                             }
                       </div>
