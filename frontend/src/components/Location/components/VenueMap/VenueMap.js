@@ -5,7 +5,7 @@ class VenueMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      api: 'AIzaSyCH2dFcRu2gHeYOMZaC0yzhD_Fq5sit4Ro',
+      // api: 'AIzaSyCH2dFcRu2gHeYOMZaC0yzhD_Fq5sit4Ro',
     };
   }
 
@@ -84,7 +84,8 @@ class VenueMap extends Component {
   render() {
     return (
       <div className="VenueMap">
-        {/* <div id="GoogleMap" className="map" /> */}
+        <div id="GoogleMap" className="map" />
+        <div className="map" />
       </div>
     );
   }
