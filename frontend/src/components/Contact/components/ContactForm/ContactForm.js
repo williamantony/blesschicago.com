@@ -28,35 +28,30 @@ class ContactForm extends Component {
   render() {
     return (
       <div className="ContactForm">
-        <div className="ContactForm__gradient" />
-        <div className="ContactForm__gradient" />
-        <div className="ContactForm__bg" />
-        <div className="wrapper">
-          <h2>Contact Us</h2>
-          <form onSubmit={this.handleSubmit}>
+        <h2>Contact Us</h2>
+        <form onSubmit={this.handleSubmit}>
 
-            <ContactFormInput
-              type="text"
-              name="name"
-              label="Full Name"
-            />
-            <ContactFormInput
-              type="email"
-              name="email"
-              label="Email Address"
-            />
-            <ContactFormInput
-              type="textarea"
-              name="message"
-              label="Your Message"
-            />
+          <ContactFormInput
+            type="text"
+            name="name"
+            label="Full Name"
+          />
+          <ContactFormInput
+            type="email"
+            name="email"
+            label="Email Address"
+          />
+          <ContactFormInput
+            type="textarea"
+            name="message"
+            label="Your Message"
+          />
 
-            <div className="ContactFormButton">
-              <button type="submit">Submit</button>
-            </div>
+          <div className="ContactFormButton">
+            <button type="submit">Submit</button>
+          </div>
 
-          </form>
-        </div>
+        </form>
       </div>
     );
   }

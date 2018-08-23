@@ -1,3 +1,43 @@
 .Contact {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0px 50px;
+  background-color: #fff;
+}
+.Contact__gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  opacity: 0.1;
+}
+.Contact__gradient:nth-child(2) {
+  height: 10%;
+}
+.Contact__bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #00075a;
+  opacity: 0.1;
+}
 
+.Contact__content {
+  display: flex;
+  position: relative;
+}
+.Contact__content > .wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: 100%;
+  max-width: 1500px;
 }

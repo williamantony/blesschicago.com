@@ -1,51 +1,19 @@
 .ContactForm {
-  position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: #fff;
-}
-.ContactForm__gradient {
-  position: absolute;
-  top: 0px;
-  left: 0px;
   width: 100%;
-  height: 50%;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
-  opacity: 0.1;
+  max-width: 700px;
+  padding: 50px 0px;
 }
-.ContactForm__gradient:nth-child(2) {
-  height: 10%;
-}
-.ContactForm__bg {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #00075a;
-  opacity: 0.1;
-}
-.ContactForm > .wrapper {
-  width: 100%;
-  max-width: 640px;
-  padding: 100px;
-  margin: 0px auto;
-}
+
 .ContactForm h2 {
-  color: #565a80;
+  color: #333333;
   font-size: 32px;
   font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  letter-spacing: 1px;
   padding: 20px;
 }
 .ContactForm form {
-  position: relative;
-  width: 100%;
-  max-width: 640px;
-  margin: 0px auto;
+
 }
 
 .ContactFormButton {
