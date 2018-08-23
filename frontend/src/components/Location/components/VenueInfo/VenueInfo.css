@@ -13,7 +13,7 @@
   max-width: 1500px;
   height: 100%;
   margin: 0px auto;
-  padding: 0px 100px;
+  padding: 0px 50px;
 }
 .VenueInfo__content {
   position: relative;
@@ -27,14 +27,17 @@
   color: #e2633b;
   font-size: 24px;
   font-family: 'Lato', sans-serif;
-  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   line-height: 28px;
   margin-bottom: 15px;
 }
 .VenueInfo__content__address {
+  color: #333333;
   font-size: 32px;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
   line-height: 42px;
 }
