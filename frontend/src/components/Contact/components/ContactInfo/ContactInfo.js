@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ContactInfo.css';
+import Heading from '../../../Heading/Heading';
 
 class ContactInfo extends Component {
   constructor(props) {
@@ -37,16 +38,19 @@ class ContactInfo extends Component {
   render() {
     return (
       <div className="ContactInfo">
-        {
-          this.state.people.map((person) => {
-            return (
-              <div className="ContactInfo__person" key={person.name}>
-                <div className="ContactInfo__person__name">{ person.name }</div>
-                <div className="ContactInfo__person__phone">{ person.phone }</div>
-              </div>
-            );
-          })
-        }
+        <Heading type="h3" text="Reach a Coordinator" />
+        <div className="ContactInfo__list">
+          {
+            this.state.people.map((person) => {
+              return (
+                <div className="ContactInfo__person" key={person.name}>
+                  <div className="ContactInfo__person__name">{ person.name }</div>
+                  <div className="ContactInfo__person__phone">{ person.phone }</div>
+                </div>
+              );
+            })
+          }
+        </div>
       </div>
     );
   }
