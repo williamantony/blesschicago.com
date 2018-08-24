@@ -1,7 +1,6 @@
 .EventSchedule {
   position: relative;
-  padding: 0px 75px 50px 75px;
-  background-color: #f0f0f0;
+  padding: 100px 50px;
 }
 .EventSchedule__gradient {
   position: absolute;
@@ -28,73 +27,67 @@
   background-color: #00075a;
   opacity: 0.05;
 }
-.EventSchedule__overflow {
-  position: relative;
-  width: 100%;
-}
+
 .EventSchedule__content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
-  width: 133.333333333%;
-  margin-left: 0%;
-  transition: margin 0.5s ease-in-out 0s;
 }
-.EventSchedule__item {
-  flex-basis: 25%;
+.EventSchedule__content > .wrapper {
+  flex-basis: 100%;
+  max-width: 1500px;
+}
+.EventSchedule__content > .wrapper > .Heading {
+  margin-bottom: 30px;
+}
+
+.EventCard {
+  flex-basis: calc(25% - 20px);
+  padding: 0px;
+  margin: 10px;
+  box-shadow: 0px 50px 100px -15px rgba(0, 7, 90, 0.1);
+  border-radius: 5px;
+  background-color: #ffffff;
+  overflow: hidden;
   opacity: 0;
   transition: opacity 0.25s ease-in-out 0s;
 }
-.EventSchedule__item--in-view {
+.EventCard--in-view {
   opacity: 1.0;
-}
-.EventCard {
-  padding: 0px;
-  margin: 10px;
-  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.1);
-  border-radius: 5px 5px 10px 10px;
-  background-color: #ffffff;
-  overflow: hidden;
 }
 .EventCard__name {
   display: flex;
-  color: #ffffff;
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  text-transform: uppercase;
-  padding: 20px 25px 20px 25px;
-  background-color: #3550e6;
-}
-.EventCard__row {
-  display: flex;
-  align-items: flex-start;
-  padding: 20px 25px 20px 25px;
-}
-.EventCard__row:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.035);
-}
-.EventCard__row:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.015);
-}
-.EventCard__row:last-child {
-  padding-bottom: 50px;
-}
-.EventCard__label {
-  flex-basis: 50px;
-  color: #777777;
-  font-size: 12px;
-  font-family: 'Lato', sans-serif;
+  color: #3550e6;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 1px;
+  word-spacing: 2px;
+  padding: 25px 25px 20px 25px;
+}
+
+.EventCard__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 25px 10px 25px;
+}
+.EventCard__row:last-child {
+  padding-bottom: 25px;
+}
+
+.EventCard__column {
+  min-width: 125px;
+}
+.EventCard__label {
+  flex-basis: 50px;
+  color: #e2633b;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 3px;
-  margin-right: 10px;
 }
 .EventCard__value {
   font-size: 18px;
@@ -108,14 +101,29 @@
 
 
 
+.EventSlider {
+  position: relative;
+}
+.EventSlider__overflow {
+  position: relative;
+  width: 100%;
+}
+.EventSlider__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  width: 133.333333333%;
+  margin-left: 0%;
+  transition: margin 0.5s ease-in-out 0s;
+}
 
-
-.EventSchedule__slider {
+.EventSlider__ {
   position: relative;
   max-width: 1500px;
   margin: 0px auto;
 }
-.EventSchedule__slider-controls {
+.EventSlider__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,24 +133,32 @@
   width: 100%;
   height: 100%;
 }
-.EventSchedule__slider-controls > .arrows {
+.EventSlider__controls > .arrows {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: calc(100% + 120px);
-  margin: 0px -60px 0px -60px;
+  width: calc(100% + 100px);
+  height: calc(100% - 20px);
+  margin: 0px -50px 0px -50px;
+}
+.EventSlider__controls > .arrows > .arrow {
+  position: relative;
+  width: 60px;
+  height: 100%;
+  border-radius: 5px;
+  background-image: url('./images/right-chevron.png');
+  background-size: 50px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: grayscale(1) opacity(0.5);
+  transition: filter 0.25s ease-in-out 0s;
   z-index: 999;
 }
-.EventSchedule__slider-controls > .arrows > .arrow {
-  width: 50px;
-  height: 150px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.25s ease-in-out 0s;
+.EventSlider__controls > .arrows > .arrow:hover {
+  filter: grayscale(0) opacity(1);
 }
-.EventSchedule__slider-controls > .arrows > .arrow:hover {
-  opacity: 1.0;
+.EventSlider__controls > .arrows > .arrow-left {
+  transform: rotate(-180deg);
 }
