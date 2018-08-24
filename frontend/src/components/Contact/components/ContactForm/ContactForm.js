@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './ContactForm.css';
 import ContactFormInput from './components/ContactFormInput/ContactFormInput';
+import Heading from '../../../Heading/Heading';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class ContactForm extends Component {
   render() {
     return (
       <div className="ContactForm">
-        <h2>Contact Us</h2>
+        <Heading type="h3" text="Send us a message" />
         <form onSubmit={this.handleSubmit}>
 
           <ContactFormInput

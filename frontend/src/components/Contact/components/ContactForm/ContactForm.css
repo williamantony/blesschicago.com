@@ -4,16 +4,8 @@
   padding: 50px 0px;
 }
 
-.ContactForm h2 {
-  color: #333333;
-  font-size: 32px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  padding: 20px;
-}
 .ContactForm form {
-
+  margin-top: 30px;
 }
 
 .ContactFormButton {
