@@ -1,7 +1,7 @@
 .Contact {
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 0px 50px;
+  padding: 100px 50px;
   background-color: #fff;
 }
 .Contact__gradient {
@@ -34,10 +34,12 @@
   position: relative;
 }
 .Contact__content > .wrapper {
+  flex-basis: 100%;
+  max-width: 1500px;
+}
+.Contact__flexContent {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
-  flex-basis: 100%;
-  max-width: 1500px;
 }

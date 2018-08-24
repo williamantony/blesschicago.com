@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Contact.css';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactInfo from './components/ContactInfo/ContactInfo';
+import Heading from '../Heading/Heading';
 
 class Contact extends Component {
 
@@ -13,8 +14,11 @@ class Contact extends Component {
         <div className="Contact__bg" />
         <div className="Contact__content">
           <div className="wrapper">
-            <ContactInfo />
-            <ContactForm />
+            <Heading type="h2" text="Contact Us" />
+            <div className="Contact__flexContent">
+              <ContactInfo />
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>
