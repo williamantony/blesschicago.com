@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import Cover from './components/Cover/Cover';
-import BibleVerse from './components/BibleVerse/BibleVerse';
-import EventSchedule from './components/EventSchedule/EventSchedule';
-import Location from './components/Location/Location';
-import Contact from './components/Contact/Contact';
+import LandingPage from './pages/LandingPage/LandingPage';
+import SchedulePage from './pages/SchedulePage/SchedulePage';
+import LocationPage from './pages/LocationPage/LocationPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cover />
-        <BibleVerse />
-        <EventSchedule />
-        <Location />
-        <Contact />
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/schedule" component={SchedulePage} />
+          <Route exact path="/venue" component={LocationPage} />
+          <Route exact path="/contact" component={ContactPage} />
+        </Switch>
       </div>
     );
   }
