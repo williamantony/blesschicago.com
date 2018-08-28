@@ -16,8 +16,8 @@ class Contact extends Component {
           <div className="wrapper">
             <Heading type="h2" text="Contact Us" />
             <div className="Contact__flexContent">
-              <ContactInfo />
               <ContactForm />
+              <ContactInfo />
             </div>
           </div>
         </div>

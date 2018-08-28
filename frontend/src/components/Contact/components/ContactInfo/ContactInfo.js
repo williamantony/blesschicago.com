@@ -43,7 +43,7 @@ class ContactInfo extends Component {
           {
             this.state.people.map((person) => {
               return (
-                <div className="ContactInfo__person" key={person.name}>
+                <div className="ContactInfo__person" key={person.name} tabIndex="0">
                   <div className="ContactInfo__person__name">{ person.name }</div>
                   <div className="ContactInfo__person__phone">{ person.phone }</div>
                 </div>
