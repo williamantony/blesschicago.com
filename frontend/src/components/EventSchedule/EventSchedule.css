@@ -1,6 +1,7 @@
 .EventSchedule {
   position: relative;
   padding: 100px 50px;
+  overflow: hidden;
 }
 .EventSchedule__gradient {
   position: absolute;

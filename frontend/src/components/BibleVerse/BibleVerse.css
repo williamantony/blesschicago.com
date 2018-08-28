@@ -5,6 +5,7 @@
   align-items: center;
   position: relative;
   min-height: 480px;
+  overflow: hidden;
 }
 .BibleVerse__bg {
   position: absolute;

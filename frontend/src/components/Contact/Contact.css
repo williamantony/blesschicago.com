@@ -3,6 +3,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   padding: 100px 50px;
   background-color: #fff;
+  overflow: hidden;
 }
 .Contact__gradient {
   position: absolute;

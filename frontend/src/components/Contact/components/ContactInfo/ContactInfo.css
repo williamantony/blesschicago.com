@@ -1,6 +1,7 @@
 .ContactInfo {
   display: flex;
   flex-wrap: wrap;
+  max-width: 680px;
 }
 .ContactInfo__list {
   display: flex;
