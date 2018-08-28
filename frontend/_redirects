@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://blesschicago-org-website-frontend.netlify.com/* https://blesschicago.org/:splat 301!
