@@ -6,6 +6,8 @@ import './Header.css';
 class Header extends Component {
 
   render() {
+    const { pathname } = this.props.location;
+
     return (
       <div className="Header Header--fixed">
         <div className="Header__bg" />
@@ -17,27 +19,27 @@ class Header extends Component {
             <nav className="Header__nav">
               <ul className="Header__nav__list">
                 <NavLink to="/">
-                  <li className="Header__nav__item" data-selected="true">
+                  <li className="Header__nav__item" data-selected={ pathname === '/' }>
                     Home
                   </li>
                 </NavLink>
                 <NavLink to="/schedule">
-                  <li className="Header__nav__item">
+                  <li className="Header__nav__item" data-selected={ pathname === '/schedule' }>
                     Schedule
                   </li>
                 </NavLink>
                 <NavLink to="venue">
-                  <li className="Header__nav__item">
+                  <li className="Header__nav__item" data-selected={ pathname === '/venue' }>
                     Venue
                   </li>
                 </NavLink>
                 <NavLink to="contact">
-                  <li className="Header__nav__item">
+                  <li className="Header__nav__item" data-selected={ pathname === '/contact' }>
                     Contact
                   </li>
                 </NavLink>
                 <NavLink to="/about/convention">
-                  <li className="Header__nav__item">
+                  <li className="Header__nav__item" data-selected={ pathname === '/about/convention' }>
                     About
                   </li>
                 </NavLink>
