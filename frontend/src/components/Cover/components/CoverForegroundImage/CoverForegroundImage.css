@@ -1,0 +1,40 @@
+.CoverForegroundImage {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  right: -100px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.25s,
+    right 0.75s ease-in-out 0s;
+}
+.CoverForegroundImage[data-loaded="true"] {
+  right: 0px;
+  opacity: 1.0;
+}
+.CoverForegroundImage > .wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+}
+.CoverForegroundImage > img {
+  display: none;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.CoverForegroundImage__img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
